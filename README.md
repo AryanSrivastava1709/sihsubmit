@@ -14,7 +14,7 @@ To Contribute
 Replace <URL> with the URL you just copied.
 
 - Create a New Branch: You can create a new branch and switch to it using:
-  git checkout -b <branch-name>
+  `git checkout -b <branch-name>`
 
 Replace <branch-name> with a name for your branch (Use your name).
 
