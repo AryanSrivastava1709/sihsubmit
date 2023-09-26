@@ -1,5 +1,8 @@
+import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { auth } from "../../firebase/firebase";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -18,7 +21,6 @@ const Login = () => {
         formEntries.password
       );
       localStorage.setItem("isLoggedIn", true);
-      setVisible(true);
       toast(`Logged in.`, {
         style: {
           borderRadius: "10px",
@@ -54,7 +56,7 @@ const Login = () => {
           },
         });
       } else {
-        console.log(err.code);
+        console.log(err.message);
       }
     }
   };

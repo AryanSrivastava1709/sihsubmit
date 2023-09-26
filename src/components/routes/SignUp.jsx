@@ -1,5 +1,8 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { auth } from "../../firebase/firebase";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -22,7 +25,6 @@ const SignUp = () => {
           color: "#fff",
         },
       });
-      setVisible(true);
       navigate("/");
     } catch (err) {
       if (err.code === "auth/email-already-in-use") {
@@ -33,7 +35,7 @@ const SignUp = () => {
       } else if (err.code === "auth/weak-password") {
         toast("Stronger password needed");
       } else {
-        console.log(err.code);
+        console.log(err);
       }
     }
   };
