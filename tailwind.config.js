@@ -13,7 +13,9 @@ export default {
         //Shades
       },
     },
-
+    fontFamily: {
+      primaryFont: ["Inter", "sans-serif"],
+    },
   },
   plugins: [],
 };

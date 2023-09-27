@@ -45,13 +45,15 @@ const SignUp = () => {
       <div className="flex items-center bg-headerColor/40 justify-start h-screen w-full">
         <div className="items-center justify-center flex w-full flex-col">
           <div className="">
-            <p>ExamWarden</p>
+            <p className=" font-primaryFont font-bold text-4xl text-primary">
+              ExamWarden
+            </p>
           </div>
 
           <img
             src={online_test}
             alt="SignUp Page"
-            className="flex h-[25rem] w-[25rem] mt-[10rem]"
+            className="flex h-[25rem] w-[25rem] mt-[8rem]"
           />
         </div>
 
