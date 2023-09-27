@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
 import toast from "react-hot-toast";
+import online_test from "../../asset/clip_path_group.png";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -40,16 +41,27 @@ const SignUp = () => {
     }
   };
   return (
-    <div className="flex items-center justify-center w-full h-screen">
+    <div className="flex  items-center justify-center">
+      <div className="flex items-center bg-headerColor/40 justify-start h-screen w-full">
+        <div className="items-center justify-center flex w-full flex-col">
+          <div className="">
+            <p>ExamWarden</p>
+          </div>
 
-      <div className="flex justify-center p-5 pt-10 gap-10 items-center  ">
-        <div className="w-[40vw] items-center justify-center flex rounded-full ">
-          <img src="https://shorturl.at/aotX9" alt="SignUp Page" className=" h-fit w-full rounded-3xl" />
+          <img
+            src={online_test}
+            alt="SignUp Page"
+            className="flex h-[25rem] w-[25rem] mt-[10rem]"
+          />
         </div>
 
-        <div>
-          <h2 className="text-4xl text-center font-bold mb-4 scale-150 rounded-lg  capitalize">Sign-Up</h2>
-          <h1 className=" text-2xl font-semibold text-center mb-6 underline underline-offset-4 ">Fill your Details</h1>
+        <div className=" bg-white h-full w-full overflow-hidden flex flex-col items-center justify-center">
+          <h2 className="text-4xl text-center font-bold mb-4 scale-150 rounded-lg  capitalize">
+            Sign-Up
+          </h2>
+          <h1 className=" text-2xl font-semibold text-center mb-6 underline underline-offset-4 ">
+            Fill your Details
+          </h1>
           <form
             className="flex  flex-col items-center gap-3 my-3"
             onSubmit={signupSubmitHandler}
