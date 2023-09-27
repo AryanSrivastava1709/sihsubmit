@@ -32,7 +32,8 @@ function Navbar() {
   return (
     <>
 
-      {navVisible && <div className=" flex items-center justify-between text-white px-4 fixed bg-black w-full h-20  ">
+      {navVisible && 
+      <div className=" flex items-center justify-between text-white px-4 fixed bg-black w-full h-20  ">
         <div className='flex items-center justify-center cursor-pointer  '>
           <img src="https://shorturl.at/adxIM" alt="Exam" className=' h-[10vh] w-[50%] rounded-lg' />
           <div><p className=' mx-[-20px] font-extrabold capitalize text-xl hover:scale-110 delay-75 duration-100 animate-pulse hover:text-amber-400  '>Exam-Warden</p></div>
